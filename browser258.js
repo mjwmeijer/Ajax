@@ -5,6 +5,15 @@ $('#divResult2').load('blz258laad.html #content',
 function(){
   $('#divAlert').html('Laden geslaagd');
 });
+$.ajax({
+  url:'blz258laad.html',
+  success:function(data){
+    $('#divResult3').html(data.filter('#ajax'))
+  },
+  error:function(){
+    $('#divResult3').html('Fout: er is iets fouts gegaan!')
+  }
+  });
 });
 
 })
